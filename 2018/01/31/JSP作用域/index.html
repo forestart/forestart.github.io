@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Hello World · forestart&#39;s Studio
+        JSP作用域 · forestart&#39;s Studio
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -72,7 +72,7 @@
                 <a href="/" >forestart&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Hello World</a>
+                <a href="#" class="post-name">JSP作用域</a>
             </div>
     </div>
     
@@ -93,7 +93,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hello World
+            JSP作用域
             <!-- 404 -->
             
         </h1>
@@ -109,10 +109,18 @@
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Java Web>Java Web</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = JSP学习>JSP学习</a>
+    
+</div>
+            
             <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/01/17</span>
+                <span class="post-intro-time">2018/01/31</span>
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe604;</span>
                     <span id="busuanzi_value_page_pv"></span>
@@ -195,27 +203,22 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h3 id="JSP属性范围"><a href="#JSP属性范围" class="headerlink" title="JSP属性范围"></a>JSP属性范围</h3><p>所谓的属性范围就是一个属性设置之后，可以经过多少个其他页面后仍然可以访问的保存范围。</p>
+<p>JSP中提供了四种属性范围，四种属性范围分别指以下四种：</p>
+<p>  <font color="#FF0000"> 当前页(page)</font> ：一个属性只能在一个页面中取得，跳转到其他页面无法取得<br>  <font color="#FF0000"> 一次服务器请求(request)</font> ：一个页面中设置的属性，只要经过了服务器跳转，则跳转之后的页面可以继续取得。<br>  <font color="#FF0000"> 一次会话(session)</font>：一个用户设置的内容，只要是与此用户相关的页面都可以访问（一个会话表示一个人，这个人设置的东西只要这个人不走，就依然有效）<br>  <font color="#FF0000"> 上下文中(application)</font>：在整个服务器上设置的属性，所有人都可以访问</p>
+<h3 id="jsp四种属性范围的使用场合"><a href="#jsp四种属性范围的使用场合" class="headerlink" title="jsp四种属性范围的使用场合"></a>jsp四种属性范围的使用场合</h3><p>　　1、<font color="#FF0000">request</font>：如果客户向服务器发请求，产生的数据，用户看完就没用了，像这样的数据就存在request域,像新闻数据，属于用户看完就没用的。<br>　　2、<font color="#FF0000">session</font>：如果客户向服务器发请求，产生的数据，用户用完了等一会儿还有用，像这样的数据就存在session域中，像购物数据，用户需要看到自己购物信息，并且等一会儿，还要用这个购物数据结帐。<br>　　3、<font color="#FF0000">application(servletContext)</font>：如果客户向服务器发请求，产生的数据，用户用完了，还要给其它用户用，像这样的数据就存在application(servletContext)域中，像聊天数据。</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2018/01/17/Azaka/" title= Azaka >
-                    <span>Next Post</span>
-                    <span>Azaka</span>
+        
+            <li class="previous">
+                <a href= "/2018/01/18/夏空のペルセウス/" title= 夏空のペルセウス >
+                    <span>Previous Post</span>
+                    <span>夏空のペルセウス</span>
                 </a>
             </li>
-        
         
     </ul>
     <!-- 评论插件 -->
@@ -298,7 +301,7 @@
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#JSP属性范围"><span class="toc-number">1.</span> <span class="toc-text">JSP属性范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jsp四种属性范围的使用场合"><span class="toc-number">2.</span> <span class="toc-text">jsp四种属性范围的使用场合</span></a></li></ol>
     </div>
     
     <div class="back-top">&#xe639;</div>

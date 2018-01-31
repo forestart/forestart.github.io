@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://forestart.github.io/"/>
-  <updated>2018-01-25T07:10:11.728Z</updated>
+  <updated>2018-01-31T01:02:59.027Z</updated>
   <id>http://forestart.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSP作用域</title>
+    <link href="http://forestart.github.io/2018/01/31/JSP%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>http://forestart.github.io/2018/01/31/JSP作用域/</id>
+    <published>2018-01-31T00:47:00.000Z</published>
+    <updated>2018-01-31T01:02:59.027Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="JSP属性范围"><a href="#JSP属性范围" class="headerlink" title="JSP属性范围"></a>JSP属性范围</h3><p>所谓的属性范围就是一个属性设置之后，可以经过多少个其他页面后仍然可以访问的保存范围。</p><p>JSP中提供了四种属性范围，四种属性范围分别指以下四种：</p><p>  <font color="#FF0000"> 当前页(page)</font> ：一个属性只能在一个页面中取得，跳转到其他页面无法取得<br>  <font color="#FF0000"> 一次服务器请求(request)</font> ：一个页面中设置的属性，只要经过了服务器跳转，则跳转之后的页面可以继续取得。<br>  <font color="#FF0000"> 一次会话(session)</font>：一个用户设置的内容，只要是与此用户相关的页面都可以访问（一个会话表示一个人，这个人设置的东西只要这个人不走，就依然有效）<br>  <font color="#FF0000"> 上下文中(application)</font>：在整个服务器上设置的属性，所有人都可以访问</p><h3 id="jsp四种属性范围的使用场合"><a href="#jsp四种属性范围的使用场合" class="headerlink" title="jsp四种属性范围的使用场合"></a>jsp四种属性范围的使用场合</h3><p>　　1、<font color="#FF0000">request</font>：如果客户向服务器发请求，产生的数据，用户看完就没用了，像这样的数据就存在request域,像新闻数据，属于用户看完就没用的。<br>　　2、<font color="#FF0000">session</font>：如果客户向服务器发请求，产生的数据，用户用完了等一会儿还有用，像这样的数据就存在session域中，像购物数据，用户需要看到自己购物信息，并且等一会儿，还要用这个购物数据结帐。<br>　　3、<font color="#FF0000">application(servletContext)</font>：如果客户向服务器发请求，产生的数据，用户用完了，还要给其它用户用，像这样的数据就存在application(servletContext)域中，像聊天数据。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;JSP属性范围&quot;&gt;&lt;a href=&quot;#JSP属性范围&quot; class=&quot;headerlink&quot; title=&quot;JSP属性范围&quot;&gt;&lt;/a&gt;JSP属性范围&lt;/h3&gt;&lt;p&gt;所谓的属性范围就是一个属性设置之后，可以经过多少个其他页面后仍然可以访问的保存范围。&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="Java Web" scheme="http://forestart.github.io/tags/Java-Web/"/>
+    
+      <category term="JSP学习" scheme="http://forestart.github.io/tags/JSP%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>夏空のペルセウス</title>
