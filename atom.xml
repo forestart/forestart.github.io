@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://forestart.github.io/"/>
-  <updated>2018-01-31T01:02:59.027Z</updated>
+  <updated>2018-02-05T03:19:17.871Z</updated>
   <id>http://forestart.github.io/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MVC模型</title>
+    <link href="http://forestart.github.io/2018/02/05/MVC%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://forestart.github.io/2018/02/05/MVC模型/</id>
+    <published>2018-02-05T02:40:42.000Z</published>
+    <updated>2018-02-05T03:19:17.871Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、Web开发中的请求-响应模型"><a href="#一、Web开发中的请求-响应模型" class="headerlink" title="一、Web开发中的请求-响应模型"></a>一、Web开发中的请求-响应模型</h3><p><img src="/images/response.png" alt="response"><br>　　在Web世界里，具体步骤如下：</p><p>　　1、Web浏览器（如IE）发起请求，如访问<a href="http://www.iteye.com/" target="_blank" rel="noopener">http://www.iteye.com/</a></p><p>　　2、Web服务器（如Tomcat）接收请求，处理请求（比如用户新增，则将把用户保存一下），最后产生响应（一般为html）。</p><p>　　3、web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染以展示给客户）。</p><p>　　因此，在Web世界里：都是Web客户端发起请求，Web服务器接收、处理并产生响应。</p><p>　　一般Web服务器是不能主动通知Web客户端更新内容。虽然现在有些技术如服务器推（如Comet）、还有现在的HTML5 websocket可以实现Web服务器主动通知Web客户端。</p><p>　　到此我们了解了在web开发时的请求/响应模型，接下来我们看一下标准的MVC模型是什么。</p><h3 id="2、标准MVC模型概述"><a href="#2、标准MVC模型概述" class="headerlink" title="2、标准MVC模型概述"></a>2、标准MVC模型概述</h3><p>　　MVC模型：是一种架构型的模式，本身不引入新功能，只是帮助我们将开发的结构组织的更加合理，使展示与模型分离、流程控制逻辑、业务逻辑调用与展示逻辑分离。如下图所示：<br><img src="/images/MVC.png" alt="MVC"></p><h3 id="二、MVC-Model-View-Controller-的概念"><a href="#二、MVC-Model-View-Controller-的概念" class="headerlink" title="二、MVC(Model-View-Controller)的概念"></a>二、MVC(Model-View-Controller)的概念</h3><p>首先让我们了解下MVC（Model-View-Controller）的概念：</p><p>　　Model（模型）：数据模型，提供要展示的数据，因此包含数据和行为，可以认为是领域模型(domain)或JavaBean组件（包含数据和行为），不过现在一般都分离开来：Value Object（数据） 和 服务层（行为）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。</p><p>　　View（视图）：负责进行模型的展示，一般就是我们见到的用户界面，客户想看到的东西。</p><p>　　Controller（控制器）：接收用户请求，委托给模型进行处理（状态改变），处理完毕后把返回的模型数据返回给视图，由视图负责展示。 也就是说控制器做了个调度员的工作。</p><p>　　从图2-1我们还看到，在标准的MVC中模型能主动推数据给视图进行更新（观察者设计模式，在模型上注册视图，当模型更新时自动更新视图），但在Web开发中模型是无法主动推给视图（无法主动更新用户界面），因为在Web开发是请求-响应模型。</p><p>　　那接下来我们看一下在Web里MVC是什么样子，我们称其为 Web MVC 来区别标准的MVC。</p><h3 id="三、Web-MVC概述"><a href="#三、Web-MVC概述" class="headerlink" title="三、Web MVC概述"></a>三、Web MVC概述</h3><p>　　Web MVC中的M(模型)-V(视图)-C(控制器)概念和标准MVC概念一样，我们再看一下Web MVC标准架构，如下图所示：<br><img src="/images/WebMVC.png" alt="WebMVC"><br>　　在Web MVC模式下，模型无法主动推数据给视图，如果用户想要视图更新，需要再发送一次请求（即请求-响应模型）。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;一、Web开发中的请求-响应模型&quot;&gt;&lt;a href=&quot;#一、Web开发中的请求-响应模型&quot; class=&quot;headerlink&quot; title=&quot;一、Web开发中的请求-响应模型&quot;&gt;&lt;/a&gt;一、Web开发中的请求-响应模型&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;/ima
+      
+    
+    </summary>
+    
+    
+      <category term="Java Web" scheme="http://forestart.github.io/tags/Java-Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JSP作用域</title>
     <link href="http://forestart.github.io/2018/01/31/JSP%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
     <id>http://forestart.github.io/2018/01/31/JSP作用域/</id>
     <published>2018-01-31T00:47:00.000Z</published>
-    <updated>2018-01-31T01:02:59.027Z</updated>
+    <updated>2018-01-31T08:02:20.894Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="JSP属性范围"><a href="#JSP属性范围" class="headerlink" title="JSP属性范围"></a>JSP属性范围</h3><p>所谓的属性范围就是一个属性设置之后，可以经过多少个其他页面后仍然可以访问的保存范围。</p><p>JSP中提供了四种属性范围，四种属性范围分别指以下四种：</p><p>  <font color="#FF0000"> 当前页(page)</font> ：一个属性只能在一个页面中取得，跳转到其他页面无法取得<br>  <font color="#FF0000"> 一次服务器请求(request)</font> ：一个页面中设置的属性，只要经过了服务器跳转，则跳转之后的页面可以继续取得。<br>  <font color="#FF0000"> 一次会话(session)</font>：一个用户设置的内容，只要是与此用户相关的页面都可以访问（一个会话表示一个人，这个人设置的东西只要这个人不走，就依然有效）<br>  <font color="#FF0000"> 上下文中(application)</font>：在整个服务器上设置的属性，所有人都可以访问</p><h3 id="jsp四种属性范围的使用场合"><a href="#jsp四种属性范围的使用场合" class="headerlink" title="jsp四种属性范围的使用场合"></a>jsp四种属性范围的使用场合</h3><p>　　1、<font color="#FF0000">request</font>：如果客户向服务器发请求，产生的数据，用户看完就没用了，像这样的数据就存在request域,像新闻数据，属于用户看完就没用的。<br>　　2、<font color="#FF0000">session</font>：如果客户向服务器发请求，产生的数据，用户用完了等一会儿还有用，像这样的数据就存在session域中，像购物数据，用户需要看到自己购物信息，并且等一会儿，还要用这个购物数据结帐。<br>　　3、<font color="#FF0000">application(servletContext)</font>：如果客户向服务器发请求，产生的数据，用户用完了，还要给其它用户用，像这样的数据就存在application(servletContext)域中，像聊天数据。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="JSP属性范围"><a href="#JSP属性范围" class="headerlink" title="JSP属性范围"></a>JSP属性范围</h3><p>所谓的属性范围就是一个属性设置之后，可以经过多少个其他页面后仍然可以访问的保存范围。</p><p>JSP中提供了四种属性范围，四种属性范围分别指以下四种：</p><p>   1、<font color="#FF0000"> 当前页(page)</font> ：一个属性只能在一个页面中取得，跳转到其他页面无法取得<br>   2、<font color="#FF0000"> 一次服务器请求(request)</font> ：一个页面中设置的属性，只要经过了服务器跳转，则跳转之后的页面可以继续取得。<br>   3、<font color="#FF0000"> 一次会话(session)</font>：一个用户设置的内容，只要是与此用户相关的页面都可以访问（一个会话表示一个人，这个人设置的东西只要这个人不走，就依然有效）<br>   4、<font color="#FF0000"> 上下文中(application)</font>：在整个服务器上设置的属性，所有人都可以访问</p><h3 id="jsp四种属性范围的使用场合"><a href="#jsp四种属性范围的使用场合" class="headerlink" title="jsp四种属性范围的使用场合"></a>jsp四种属性范围的使用场合</h3><p>1、<font color="#FF0000">request</font>：如果客户向服务器发请求，产生的数据，用户看完就没用了，像这样的数据就存在request域,像新闻数据，属于用户看完就没用的。<br>2、<font color="#FF0000">session</font>：如果客户向服务器发请求，产生的数据，用户用完了等一会儿还有用，像这样的数据就存在session域中，像购物数据，用户需要看到自己购物信息，并且等一会儿，还要用这个购物数据结帐。<br>3、<font color="#FF0000">application(servletContext)</font>：如果客户向服务器发请求，产生的数据，用户用完了，还要给其它用户用，像这样的数据就存在application(servletContext)域中，像聊天数据。</p>]]></content>
     
     <summary type="html">
     
@@ -74,15 +97,15 @@
     <link href="http://forestart.github.io/2018/01/17/Azaka/"/>
     <id>http://forestart.github.io/2018/01/17/Azaka/</id>
     <published>2018-01-17T07:33:40.000Z</published>
-    <updated>2018-01-25T05:52:50.923Z</updated>
+    <updated>2018-02-01T00:49:01.184Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/Azaka.jpg" alt="Azaka"></p>]]></content>
+    <content type="html"><![CDATA[<p>黒桐(こくとう) 鮮花(あざか)<br><img src="/images/Azaka.jpeg" alt="Azaka"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;/images/Azaka.jpg&quot; alt=&quot;Azaka&quot;&gt;&lt;/p&gt;
+        &lt;p&gt;黒桐(こくとう) 鮮花(あざか)&lt;br&gt;&lt;img src=&quot;/images/Azaka.jpeg&quot; alt=&quot;Azaka&quot;&gt;&lt;/p&gt;
 
       
     

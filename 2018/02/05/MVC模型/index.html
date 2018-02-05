@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        forestart&#39;s Studio
+        MVC模型 · forestart&#39;s Studio
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -58,14 +58,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >forestart&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">MVC模型</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>forestart's Studio.</a>
 </header>
@@ -75,17 +84,17 @@
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/intro/intro-desktop.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            forestart's Studio.
-            <!-- 文章页  -->
+            MVC模型
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -93,12 +102,36 @@
             <!-- 主页副标题  -->
             
             
-                Entities should not be multiplied unnecessarily
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Java Web>Java Web</a>
+    
+</div>
+            
+            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/02/05</span>
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe604;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">
+                        &#xe601;
+                    </span>
+                    <span class="bdsharebuttonbox">
+                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
+                    </span>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -166,209 +199,67 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/02/05/MVC模型/" >
-                
-                    <span>MVC模型</span>
-            </a>
-            <a class="content-show-full" href = "/2018/02/05/MVC模型/" >
-                <div class="abstract-content">
-                    一、Web开发中的请求-响应模型　　在Web世界里，具体步骤如下：
-　　1、Web浏览器（如IE）发起请求，如访问http://www.iteye.com/
-　　2、Web服务器（如Tomcat）接收请求，处理请求（比如用户新增，则将把用户保存一下），最后产生响应（一般为html）。
-　　3、web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染以展示给客户）。
-　　因此，在Web世界里：都是Web客户端发起请求，Web服务器接收、处理并产生响应。
-　　一般Web服务器是不能主动通知Web客户端...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = Java Web>Java Web</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/02/05</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/31/JSP作用域/" >
-                
-                    <span>JSP作用域</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/31/JSP作用域/" >
-                <div class="abstract-content">
-                    JSP属性范围所谓的属性范围就是一个属性设置之后，可以经过多少个其他页面后仍然可以访问的保存范围。
-JSP中提供了四种属性范围，四种属性范围分别指以下四种：
-   1、 当前页(page) ：一个属性只能在一个页面中取得，跳转到其他页面无法取得   2、 一次服务器请求(request) ：一个页面中设置的属性，只要经过了服务器跳转，则跳转之后的页面可以继续取得。   3、 一次会话(session)：一个用户设置的内容，只要是与此用户相关的页面都可以访问（一个会话表示一个人，这个人设置的东西只要这个人不走，就依然有效）   4、 上下文中(application)：在整个服务器上设置的...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = Java Web>Java Web</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = JSP学习>JSP学习</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/31</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/18/夏空のペルセウス/" >
-                
-                    <span>夏空のペルセウス</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/18/夏空のペルセウス/" >
-                <div class="abstract-content">
-                    游戏介绍:夏空のペルセウス是由minori公司于2012年12月21日发行的恋爱冒险游戏。副标题为「The brave under the summer sky」。游戏从7月的一天，行走在山道间的巴士中，远野森罗（とおの しんら）和妹妹远野恋（とおの れん）正发生着口角开始。
-故事情节:「又来了，别去管那么多闲事可以吗」「啊啊」 这对兄妹，拥有将他人的伤痛“转移”至自身的能力。 无法“治愈”，只能“转移”的无用能力。 但是，森罗依旧认为这份力量一定有其意义所在。
- 他们从小无依无靠，在因这份力量而不断地被利用的环境下长大。 他们辗转于各亲戚家中，在自己的能力为周围所知后，一次又一次地被利...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = gal介绍>gal介绍</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = minori>minori</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 中二社>中二社</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/18</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/17/Azaka/" >
-                
-                    <span>Azaka</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/17/Azaka/" >
-                <div class="abstract-content">
-                    黒桐(こくとう) 鮮花(あざか)
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="一、Web开发中的请求-响应模型"><a href="#一、Web开发中的请求-响应模型" class="headerlink" title="一、Web开发中的请求-响应模型"></a>一、Web开发中的请求-响应模型</h3><p><img src="/images/response.png" alt="response"><br>　　在Web世界里，具体步骤如下：</p>
+<p>　　1、Web浏览器（如IE）发起请求，如访问<a href="http://www.iteye.com/" target="_blank" rel="noopener">http://www.iteye.com/</a></p>
+<p>　　2、Web服务器（如Tomcat）接收请求，处理请求（比如用户新增，则将把用户保存一下），最后产生响应（一般为html）。</p>
+<p>　　3、web服务器处理完成后，返回内容给web客户端（一般就是我们的浏览器），客户端对接收的内容进行处理（如web浏览器将会对接收到的html内容进行渲染以展示给客户）。</p>
+<p>　　因此，在Web世界里：都是Web客户端发起请求，Web服务器接收、处理并产生响应。</p>
+<p>　　一般Web服务器是不能主动通知Web客户端更新内容。虽然现在有些技术如服务器推（如Comet）、还有现在的HTML5 websocket可以实现Web服务器主动通知Web客户端。</p>
+<p>　　到此我们了解了在web开发时的请求/响应模型，接下来我们看一下标准的MVC模型是什么。</p>
+<h3 id="2、标准MVC模型概述"><a href="#2、标准MVC模型概述" class="headerlink" title="2、标准MVC模型概述"></a>2、标准MVC模型概述</h3><p>　　MVC模型：是一种架构型的模式，本身不引入新功能，只是帮助我们将开发的结构组织的更加合理，使展示与模型分离、流程控制逻辑、业务逻辑调用与展示逻辑分离。如下图所示：<br><img src="/images/MVC.png" alt="MVC"></p>
+<h3 id="二、MVC-Model-View-Controller-的概念"><a href="#二、MVC-Model-View-Controller-的概念" class="headerlink" title="二、MVC(Model-View-Controller)的概念"></a>二、MVC(Model-View-Controller)的概念</h3><p>首先让我们了解下MVC（Model-View-Controller）的概念：</p>
+<p>　　Model（模型）：数据模型，提供要展示的数据，因此包含数据和行为，可以认为是领域模型(domain)或JavaBean组件（包含数据和行为），不过现在一般都分离开来：Value Object（数据） 和 服务层（行为）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。</p>
+<p>　　View（视图）：负责进行模型的展示，一般就是我们见到的用户界面，客户想看到的东西。</p>
+<p>　　Controller（控制器）：接收用户请求，委托给模型进行处理（状态改变），处理完毕后把返回的模型数据返回给视图，由视图负责展示。 也就是说控制器做了个调度员的工作。</p>
+<p>　　从图2-1我们还看到，在标准的MVC中模型能主动推数据给视图进行更新（观察者设计模式，在模型上注册视图，当模型更新时自动更新视图），但在Web开发中模型是无法主动推给视图（无法主动更新用户界面），因为在Web开发是请求-响应模型。</p>
+<p>　　那接下来我们看一下在Web里MVC是什么样子，我们称其为 Web MVC 来区别标准的MVC。</p>
+<h3 id="三、Web-MVC概述"><a href="#三、Web-MVC概述" class="headerlink" title="三、Web MVC概述"></a>三、Web MVC概述</h3><p>　　Web MVC中的M(模型)-V(视图)-C(控制器)概念和标准MVC概念一样，我们再看一下Web MVC标准架构，如下图所示：<br><img src="/images/WebMVC.png" alt="WebMVC"><br>　　在Web MVC模式下，模型无法主动推数据给视图，如果用户想要视图更新，需要再发送一次请求（即请求-响应模型）。</p>
 
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2018/01/31/JSP作用域/" title= JSP作用域 >
+                    <span>Previous Post</span>
+                    <span>JSP作用域</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid= MTAyMC8zMzMwNy85ODY0>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
-        <a class="post-tag" href="javascript:void(0);" data-href = CG>CG</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 空の境界>空の境界</a>
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/17</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/01/17/hello-world/" >
-                
-                    <span>Hello World</span>
-            </a>
-            <a class="content-show-full" href = "/2018/01/17/hello-world/" >
-                <div class="abstract-content">
-                    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/01/17</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" src= /avatar/forestart.jpg >
-    <div class="profile-name">forestart</div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:2571154086@qq.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/forestart" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-            
-                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title="rss"></a>
-            
-        
-    
-
-    </div>
-    
-    
-    
-        <div class="about-me">
-            <div>
-                <a href = "/about" >ABOUT ME</a>
-            </div>
-        </div>
-    
-</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -414,6 +305,13 @@ More...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、Web开发中的请求-响应模型"><span class="toc-number">1.</span> <span class="toc-text">一、Web开发中的请求-响应模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、标准MVC模型概述"><span class="toc-number">2.</span> <span class="toc-text">2、标准MVC模型概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、MVC-Model-View-Controller-的概念"><span class="toc-number">3.</span> <span class="toc-text">二、MVC(Model-View-Controller)的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、Web-MVC概述"><span class="toc-number">4.</span> <span class="toc-text">三、Web MVC概述</span></a></li></ol>
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">

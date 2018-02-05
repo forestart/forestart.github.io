@@ -205,12 +205,19 @@
     <article class="article-entry">
         <h3 id="JSP属性范围"><a href="#JSP属性范围" class="headerlink" title="JSP属性范围"></a>JSP属性范围</h3><p>所谓的属性范围就是一个属性设置之后，可以经过多少个其他页面后仍然可以访问的保存范围。</p>
 <p>JSP中提供了四种属性范围，四种属性范围分别指以下四种：</p>
-<p>  <font color="#FF0000"> 当前页(page)</font> ：一个属性只能在一个页面中取得，跳转到其他页面无法取得<br>  <font color="#FF0000"> 一次服务器请求(request)</font> ：一个页面中设置的属性，只要经过了服务器跳转，则跳转之后的页面可以继续取得。<br>  <font color="#FF0000"> 一次会话(session)</font>：一个用户设置的内容，只要是与此用户相关的页面都可以访问（一个会话表示一个人，这个人设置的东西只要这个人不走，就依然有效）<br>  <font color="#FF0000"> 上下文中(application)</font>：在整个服务器上设置的属性，所有人都可以访问</p>
-<h3 id="jsp四种属性范围的使用场合"><a href="#jsp四种属性范围的使用场合" class="headerlink" title="jsp四种属性范围的使用场合"></a>jsp四种属性范围的使用场合</h3><p>　　1、<font color="#FF0000">request</font>：如果客户向服务器发请求，产生的数据，用户看完就没用了，像这样的数据就存在request域,像新闻数据，属于用户看完就没用的。<br>　　2、<font color="#FF0000">session</font>：如果客户向服务器发请求，产生的数据，用户用完了等一会儿还有用，像这样的数据就存在session域中，像购物数据，用户需要看到自己购物信息，并且等一会儿，还要用这个购物数据结帐。<br>　　3、<font color="#FF0000">application(servletContext)</font>：如果客户向服务器发请求，产生的数据，用户用完了，还要给其它用户用，像这样的数据就存在application(servletContext)域中，像聊天数据。</p>
+<p>   1、<font color="#FF0000"> 当前页(page)</font> ：一个属性只能在一个页面中取得，跳转到其他页面无法取得<br>   2、<font color="#FF0000"> 一次服务器请求(request)</font> ：一个页面中设置的属性，只要经过了服务器跳转，则跳转之后的页面可以继续取得。<br>   3、<font color="#FF0000"> 一次会话(session)</font>：一个用户设置的内容，只要是与此用户相关的页面都可以访问（一个会话表示一个人，这个人设置的东西只要这个人不走，就依然有效）<br>   4、<font color="#FF0000"> 上下文中(application)</font>：在整个服务器上设置的属性，所有人都可以访问</p>
+<h3 id="jsp四种属性范围的使用场合"><a href="#jsp四种属性范围的使用场合" class="headerlink" title="jsp四种属性范围的使用场合"></a>jsp四种属性范围的使用场合</h3><p>1、<font color="#FF0000">request</font>：如果客户向服务器发请求，产生的数据，用户看完就没用了，像这样的数据就存在request域,像新闻数据，属于用户看完就没用的。<br>2、<font color="#FF0000">session</font>：如果客户向服务器发请求，产生的数据，用户用完了等一会儿还有用，像这样的数据就存在session域中，像购物数据，用户需要看到自己购物信息，并且等一会儿，还要用这个购物数据结帐。<br>3、<font color="#FF0000">application(servletContext)</font>：如果客户向服务器发请求，产生的数据，用户用完了，还要给其它用户用，像这样的数据就存在application(servletContext)域中，像聊天数据。</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
+        
+            <li class="next">
+                <a href= "/2018/02/05/MVC模型/" title= MVC模型 >
+                    <span>Next Post</span>
+                    <span>MVC模型</span>
+                </a>
+            </li>
         
         
             <li class="previous">
@@ -349,7 +356,16 @@
     
     
     
-    <div class="total-archive"> Total : 4 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 5 </div>
     
     <div class="post-archive">
     
@@ -358,6 +374,11 @@
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2018/02/05/MVC模型/" >MVC模型</a>
+        </li>
     
     
         <li class="archive-post-item">
