@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://forestart.github.io/"/>
-  <updated>2018-02-05T03:19:17.871Z</updated>
+  <updated>2018-07-16T03:25:43.306Z</updated>
   <id>http://forestart.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>float和double的精度和在计算机中的显示</title>
+    <link href="http://forestart.github.io/2018/07/16/float%E5%92%8Cdouble%E7%9A%84%E7%B2%BE%E5%BA%A6%E5%92%8C%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E6%98%BE%E7%A4%BA/"/>
+    <id>http://forestart.github.io/2018/07/16/float和double的精度和在计算机中的显示/</id>
+    <published>2018-07-16T03:09:40.000Z</published>
+    <updated>2018-07-16T03:25:43.306Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="float与double的范围"><a href="#float与double的范围" class="headerlink" title="float与double的范围"></a>float与double的范围</h3><p>float与double的范围是由指数的位数来决定的,float指数为有8位,而double的指数为有11位,分布如下:</p><p>float:1 bit(符号位),8 bits(指数位),23 bits(尾数位)<br>double:1 bit(符号位),11 bits(指数位),52 bits(尾数位)</p><p>在数学中,浮点数的基本表达法为:<br>(浮点)数值=尾数*底数^指数,(附加正负号)</p><p>于是，float的指数范围为-127~128，而double的指数范围为-1023~1024，并且指数位是按补码的形式来划分的。其中负指数决定了浮点数所能表达的绝对值最小的数；而正指数决定了浮点数所能表达的绝对值最大的数，也即决定了浮点数的取值范围。</p><p>float的范围为-2^128 ~ +2^128，也即-3.40E+38 ~ +3.40E+38；double的范围为-2^1024 ~ +2^1024，也即-1.79E+308 ~ +1.79E+308。</p><h3 id="float与double的精度"><a href="#float与double的精度" class="headerlink" title="float与double的精度"></a>float与double的精度</h3><p>float和double的精度是由尾数的位数来决定的。浮点数在内存中是按科学计数法来存储的，其整数部分始终是一个隐含着的“1”，由于它是不变的，故不能对精度造成影响。</p><p>float：2^23 = 8388608，一共七位，这意味着最多能有7位有效数字，但绝对能保证的为6位，也即float的精度为6~7位有效数字；</p><p>double：2^52 = 4503599627370496，一共16位，同理，double的精度为15~16位。</p><p>###总结<br>无论是单精度还是双精度在存储中都分为三个部分：</p><p>1、符号位(Sign) : 0代表正，1代表为负<br>2、指数位（Exponent）:用于存储科学计数法中的指数数据，并且采用移位存储<br>3、尾数部分（Mantissa）：尾数部分</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;float与double的范围&quot;&gt;&lt;a href=&quot;#float与double的范围&quot; class=&quot;headerlink&quot; title=&quot;float与double的范围&quot;&gt;&lt;/a&gt;float与double的范围&lt;/h3&gt;&lt;p&gt;float与double的范围是由指
+      
+    
+    </summary>
+    
+    
+      <category term="浮点数" scheme="http://forestart.github.io/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/"/>
+    
+      <category term="计算机表示" scheme="http://forestart.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A1%A8%E7%A4%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>心情随笔</title>
+    <link href="http://forestart.github.io/2018/07/16/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/"/>
+    <id>http://forestart.github.io/2018/07/16/心情随笔/</id>
+    <published>2018-07-16T02:43:50.000Z</published>
+    <updated>2018-07-16T03:06:01.811Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="5个月没更新的原因"><a href="#5个月没更新的原因" class="headerlink" title="5个月没更新的原因"></a>5个月没更新的原因</h3><p>当然是摸鱼啦，(ノ｀Д)ノ，其实就是忘记了博客这个东西，忽然兴趣使然才想起更新，（说起来我当初还买了个域名是为了什么，浪费我一瓶水钱o(╥﹏╥)o）<br>总而言之，事情太多是个理由，毕业时的迷茫期也是一个理由，现在终于安定下来准备好好工作的我，思维又开始活跃起来准备考研了，当初我大三的时候在干啥(ノ｀Д)ノ，希望这次能下定决心，不要3分钟热度了，考上自己理想的学校，找到目标，是为了以后更好的摸鱼（咸鱼是这样的啊）。</p><h3 id="以后的规划"><a href="#以后的规划" class="headerlink" title="以后的规划"></a>以后的规划</h3><p>纠结了3-4天，脑海里一直在研究考研的可行性，咸鱼也是要有梦想的啊，就算是个咸鱼我也要变成最咸的那一条，昨天心血来潮买了一堆复习资料，希望到时候不是买废纸的结局（忽然发现这篇随笔好像还是个flag），早上英语，晚上数学，上班摸鱼做算法，学学数据结构。完成自己的规划，steam,wegame卸载，（Ps4启动(ノ｀Д)ノ），希望明年在看这篇文章的时候我已经在研究室里摸鱼了</p><h3 id="更新方面"><a href="#更新方面" class="headerlink" title="更新方面"></a>更新方面</h3><p>gal博文写了一篇，就开始没有了兴致（老咸鱼代表：3分钟热度），由于要考研复习的原因(其实就是不想写了)，天坑先摆在这了，更新随缘。<br>日常遇到的问题记录，这个是个新坑（记得每天更新哦，没问题也给我写个事毕，与朋友打牌什么的）<br>相关知识记录，把白天学到的专业相关的东西做一个记录，既然不想动笔就动动自己的手指吧（唯一的运动）</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>不再摸鱼，记得更新，做最咸的那条咸鱼。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;5个月没更新的原因&quot;&gt;&lt;a href=&quot;#5个月没更新的原因&quot; class=&quot;headerlink&quot; title=&quot;5个月没更新的原因&quot;&gt;&lt;/a&gt;5个月没更新的原因&lt;/h3&gt;&lt;p&gt;当然是摸鱼啦，(ノ｀Д)ノ，其实就是忘记了博客这个东西，忽然兴趣使然才想起更新，（说
+      
+    
+    </summary>
+    
+    
+      <category term="咸鱼的心情记录" scheme="http://forestart.github.io/tags/%E5%92%B8%E9%B1%BC%E7%9A%84%E5%BF%83%E6%83%85%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>MVC模型</title>
