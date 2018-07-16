@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://forestart.github.io/"/>
-  <updated>2018-07-16T03:25:43.306Z</updated>
+  <updated>2018-07-16T06:02:34.477Z</updated>
   <id>http://forestart.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>7.16问题记录</title>
+    <link href="http://forestart.github.io/2018/07/16/7-16%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://forestart.github.io/2018/07/16/7-16问题记录/</id>
+    <published>2018-07-16T05:51:54.000Z</published>
+    <updated>2018-07-16T06:02:34.477Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="hexo上传问题"><a href="#hexo上传问题" class="headerlink" title="hexo上传问题"></a>hexo上传问题</h3><p> 许久没有更新blog上传至git,导致出现很多杂七杂八的问题,结果浪费了一上午的时间(这就是当咸鱼的苦果(ノ｀Д)ノ）<br> 1、本地服务启动正常,上传git时失败报错。<br> 通过理性分析(小学生逻辑),一看就知道是于git的连接出现问题,修改了config中的URL后依旧出现问题。之后发现ssh未配置，配置完成依旧连接上传失效,多方查询终于发现自己的git邮箱没有开放(什么睿智操作(ノ｀Д)ノ),修改后上传成功。<br> 2、上传成功后,访问forestart.club失效404<br> 上传成功之后心情激动,立马准备打开网页看看我的大作,然后就404了,根目录下CNAME文件未配置(记得放域名啊(ノ｀Д)ノ),配置完成问题解决,日常睿智操作完成。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;hexo上传问题&quot;&gt;&lt;a href=&quot;#hexo上传问题&quot; class=&quot;headerlink&quot; title=&quot;hexo上传问题&quot;&gt;&lt;/a&gt;hexo上传问题&lt;/h3&gt;&lt;p&gt; 许久没有更新blog上传至git,导致出现很多杂七杂八的问题,结果浪费了一上午的时间(这就
+      
+    
+    </summary>
+    
+    
+      <category term="问题记录" scheme="http://forestart.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>float和double的精度和在计算机中的显示</title>
