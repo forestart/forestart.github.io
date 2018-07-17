@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        forestart&#39;s Studio
+        构建工具ant,maven,gradle · forestart&#39;s Studio
         
     </title>
     <link rel="icon" href= /assets/favicon.ico>
@@ -58,6 +58,8 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
@@ -65,27 +67,73 @@
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
     
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >forestart&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">构建工具ant,maven,gradle</a>
+            </div>
+    </div>
+    
     <a class="home-link" href=/>forestart's Studio.</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            构建工具ant,maven,gradle
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 构建工具>构建工具</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = ant,maven,gradle>ant,maven,gradle</a>
+    
+</div>
+            
+            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/07/16</span>
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe604;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">
+                        &#xe601;
+                    </span>
+                    <span class="bdsharebuttonbox">
+                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
+                    </span>
+                </span>
+            </div>
         
     </div>
 </div>
@@ -153,131 +201,56 @@
             }
         </script>
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/07/16/构建工具ant-maven-gradle/" >
-                
-                    <span>构建工具ant,maven,gradle</span>
-            </a>
-            <a class="content-show-full" href = "/2018/07/16/构建工具ant-maven-gradle/" >
-                <div class="abstract-content">
-                    构建工具写一个java程序基本的步骤为编译,测试,打包。构建过程中如果文件较少,可以手动使用java,javac,jar命令去做这些事情,当工程变大文件变多时,这些都是机械工作,所以需要把这些机械的操作交给机器去做。
-linux有一个工具叫make。可以通过makefile来执行工程的构建,windows上相应的工具为nmake。由于写起来较为啰嗦,早期java构建没有选择,新建了个ant工具。思想于makefile比较像,定义一个任务,规定他的依赖,然后就可以通过ant来执行任务。ant定义了五个任务，init, compile, build, test, clean。每个任务做什么都...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 构建工具>构建工具</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = ant,maven,gradle>ant,maven,gradle</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/07/16</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/07/16/7-16问题记录/" >
-                
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="构建工具"><a href="#构建工具" class="headerlink" title="构建工具"></a>构建工具</h3><p>写一个java程序基本的步骤为编译,测试,打包。构建过程中如果文件较少,可以手动使用java,javac,jar命令去做这些事情,当工程变大文件变多时,这些都是机械工作,所以需要把这些机械的操作交给机器去做。</p>
+<p>linux有一个工具叫make。可以通过makefile来执行工程的构建,windows上相应的工具为nmake。由于写起来较为啰嗦,早期java构建没有选择,新建了个ant工具。思想于makefile比较像,定义一个任务,规定他的依赖,然后就可以通过ant来执行任务。<br>ant定义了五个任务，init, compile, build, test, clean。每个任务做什么都定义清楚了。打包之前要先编译，所以通过depends来指定依赖的路径。如果在命令行里执行ant build，那就会先执行compile，而compile又依赖于init，所以就会先执行init<br>之后就只需要一条命令：ant test<br>就可以执行编程,打包,测试了<br>ant的缺陷为,没有办法管理依赖，每次打包都要将正确版本的第三方工具拷到lib下面去,枯燥并且容易出错,为了解决这个问题,出现了maven。</p>
+<p>maven最核心的改进在于提出了仓库这个概念,我们可以把所有依赖的包都放到仓库里面去,在工程管理文件中,表面需要什么包,什么版本。在构建之时,maven自动打包,不用管理大量的jar文件。<br>为了达到这个目标,maven提出,要给每个包标上坐标,便于在仓库里查找。所以,使用maven构建发布的包都会按照约定定义自己的坐标。maven抛弃了ant中通过target定义任务的做法,引入了全新的生命周期的概念。</p>
+<p>maven已经很好了,可以满足绝大部分工程的构建,为何还有新的构建工具gradle？<br>第一:maven是用xml进行配置的,语法不简洁。<br>第二:最关键的,最关键的，maven在约定优于配置这条路上走太远了。就是说，maven不鼓励你自己定义任务，它要求用户在maven的生命周期中使用插件的方式去工作。这有点像设计模式中的模板方法模式。说通俗一点，就是我使用maven的话，想灵活地定义自己的任务是不行的。基于这个原因，gradle做了很多改进。</p>
+<p>gradle并不是另起炉灶，它充分地使用了maven的现有资源。继承了maven中仓库，坐标，依赖这些核心概念。文件的布局也和maven相同。但同时，它又继承了ant中target的概念，我们又可以重新定义自己的任务了。(gradle中叫做task)</p>
+<p>以上为理论知识，本文摘至<a href="https://zhuanlan.zhihu.com/p/24429133,谢谢作者的总结" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/24429133,谢谢作者的总结</a></p>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2018/07/16/7-16问题记录/" title= 7.16问题记录 >
+                    <span>Previous Post</span>
                     <span>7.16问题记录</span>
-            </a>
-            <a class="content-show-full" href = "/2018/07/16/7-16问题记录/" >
-                <div class="abstract-content">
-                    hexo上传问题 许久没有更新blog上传至git,导致出现很多杂七杂八的问题,结果浪费了一上午的时间(这就是当咸鱼的苦果(ノ｀Д)ノ） 1、本地服务启动正常,上传git时失败报错。 通过理性分析(小学生逻辑),一看就知道是于git的连接出现问题,修改了config中的URL后依旧出现问题。之后发现ssh未配置，配置完成依旧连接上传失效,多方查询终于发现自己的git邮箱没有开放(什么睿智操作(ノ｀Д)ノ),修改后上传成功。 2、上传成功后,访问forestart.club失效404 上传成功之后心情激动,立马准备打开网页看看我的大作,然后就404了,根目录下CNAME文件未配置(记得放域...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 问题记录>问题记录</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/07/16</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/07/16/float和double的精度和在计算机中的显示/" >
-                
-                    <span>float和double的精度和在计算机中的显示</span>
-            </a>
-            <a class="content-show-full" href = "/2018/07/16/float和double的精度和在计算机中的显示/" >
-                <div class="abstract-content">
-                    float与double的范围float与double的范围是由指数的位数来决定的,float指数为有8位,而double的指数为有11位,分布如下:
-float:1 bit(符号位),8 bits(指数位),23 bits(尾数位)double:1 bit(符号位),11 bits(指数位),52 bits(尾数位)
-在数学中,浮点数的基本表达法为:(浮点)数值=尾数*底数^指数,(附加正负号)
-于是，float的指数范围为-127~128，而double的指数范围为-1023~1024，并且指数位是按补码的形式来划分的。其中负指数决定了浮点数所能表达的绝对值最小的数；而正指数决定了浮...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 浮点数>浮点数</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 计算机表示>计算机表示</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/07/16</span>
-                </div>
-            </div>
-        </article>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid= MTAyMC8zMzMwNy85ODY0>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-        <article class="index-post">
-            <a class="abstract-title" href = "/2018/07/16/心情随笔/" >
-                
-                    <span>心情随笔</span>
-            </a>
-            <a class="content-show-full" href = "/2018/07/16/心情随笔/" >
-                <div class="abstract-content">
-                    5个月没更新的原因当然是摸鱼啦，(ノ｀Д)ノ，其实就是忘记了博客这个东西，忽然兴趣使然才想起更新，（说起来我当初还买了个域名是为了什么，浪费我一瓶水钱o(╥﹏╥)o）总而言之，事情太多是个理由，毕业时的迷茫期也是一个理由，现在终于安定下来准备好好工作的我，思维又开始活跃起来准备考研了，当初我大三的时候在干啥(ノ｀Д)ノ，希望这次能下定决心，不要3分钟热度了，考上自己理想的学校，找到目标，是为了以后更好的摸鱼（咸鱼是这样的啊）。
-以后的规划纠结了3-4天，脑海里一直在研究考研的可行性，咸鱼也是要有梦想的啊，就算是个咸鱼我也要变成最咸的那一条，昨天心血来潮买了一堆复习资料，希望到时候不是买废...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 咸鱼的心情记录>咸鱼的心情记录</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2018/07/16</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -325,6 +298,13 @@ float:1 bit(符号位),8 bits(指数位),23 bits(尾数位)double:1 bit(符号�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper">
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#构建工具"><span class="toc-number">1.</span> <span class="toc-text">构建工具</span></a></li></ol>
+    </div>
     
     <div class="back-top">&#xe639;</div>
     <div class="sidebar">
